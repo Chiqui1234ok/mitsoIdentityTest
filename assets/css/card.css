@@ -1,0 +1,33 @@
+.card {
+    /* background-image: linear-gradient(90deg, var(--modernBlue) 0%, var(--violet) 50%, var(--black) 51%); */
+    width: 360px;
+    height: 720px;
+    border-radius: var(--gap);
+    position: relative;
+    overflow: hidden;
+    transform: rotate3d(2, 4, 0, 45deg);
+    transition: var(--timing) ease-out;
+    border: 1px solid var(--black);
+    box-shadow: -10px 10px var(--gap) var(--modernBlue);
+}
+.card::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    background: linear-gradient(90deg, var(--modernBlue) 0%, var(--violet) 80%, var(--black) 81%) 0 0 repeat;
+    transform: rotate(30deg);
+}
+.card.grid-2 {grid-template-columns: 60% auto;}
+.card h1 {font-size: 33px}
+.card h1, .card h1 span, .card h4, .card p, .card ul {color: var(--white)}
+.card:hover {
+    transform: rotate3d(0, 0, 0, 45deg);
+    border-radius: var(--gap-sm);
+    box-shadow: 0 0 var(--gap-md) var(--modernBlue);
+}
+.card ul {list-style: none}
+.card ul li {padding: var(--gap-md) 0 var(--gap-md) 0}

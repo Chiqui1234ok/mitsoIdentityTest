@@ -1,0 +1,49 @@
+/* Prácticamente, no uso pseudo-elementos porque con las clases tengo más control vía JS */
+
+/* Entrada de datos */
+.input, .button {
+    width: 100%;
+    clear: both;
+    color: var(--black);
+    font-family: "Roboto" -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 1px solid var(--modernBlue) !important;
+    padding: var(--gap-md);
+    margin: var(--gap-md) 0 var(--gap-md) 0;
+    transition: all var(--timing-md) ease-out;
+    outline: none;
+    border: none;
+}
+.input:hover, .input:focus {
+    border-radius: var(--gap-md);
+    border: 1px solid var(--violet) !important;
+}
+.input.valid {border: 1px solid var(--green)}
+.input.invalid {
+    border: 1px solid var(--red);
+    color: var(--black)
+}
+.input.disabled, .input:disabled {
+    background: var(--gray);
+    color: var(--black);
+    opacity: var(--disabledOpacity)
+}
+/* Botones */
+.button {
+    background: var(--modernBlue);
+    color: var(--white) !important;
+    box-shadow: 0 0 var(--gap-md) var(--modernBlue);
+}
+.button:hover {
+    border-radius: var(--gap-md);
+    transform: scale(1.07);
+}
+.button.valid {background: var(--modernBlue)}
+.button.invalid {
+    background: var(--red);border: 0 var(--gap) 0 0;
+    opacity: var(--disabledOpacity);
+    box-shadow: none
+}
+.button.invalid:hover {opacity: 1}
+.button.disabled, .button:disabled {background: var(--disabled)}
+/* Común */
+.input:disabled, .button:disabled {cursor: not-allowed}

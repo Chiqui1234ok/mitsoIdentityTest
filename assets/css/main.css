@@ -1,0 +1,161 @@
+/*
+    Tipografía del logo Orbitron: https://fonts.google.com/specimen/Orbitron?preview.text=MITSO+TECH+&preview.text_type=custom&preview.size=61&category=Sans+Serif&width=8
+*/
+* {
+    box-sizing: border-box;
+}
+/* Importación de tipografías */
+@font-face {
+    src: url('../font/montserrat-light.ttf');
+    font-family: "Montserrat Light";
+    font-weight: 300;
+}
+.montserrat {font-family: 'Montserrat Light'}
+@font-face {
+    src: url('../font/orbitron.ttf');
+    font-family: "Orbitron Bold";
+    font-weight: 500;
+}
+.orbitron {font-family: 'Orbitron Bold'}
+/* Variables */
+:root {
+    /* Paleta de colores */
+    --black: rgba(45, 45, 45, 1);
+    --black-semiTransparent: rgba(45, 45, 45, 0.5);
+    --blue: rgba(35, 35, 215, 1);
+    --blueGradient: linear-gradient(180deg, var(--modernBlue) 0%, var(--violet) 100%);
+    --green: rgba(35, 215, 35, 1);
+    --gray: rgba(180, 180, 195, 1);
+    --gray-semiTransparent: rgba(218, 218, 228, 0.9);
+    --grayGradient: linear-gradient(180deg, var(--gray) 0%, var(--white) 100%);
+    --modernBlue: rgba(50, 50, 255, 1);
+    --quietViolet: rgba(53, 59, 143, 1);
+    --red: rgba(255, 50, 75, 1);
+    --violet: rgb(78, 47, 218);
+    --white: rgba(240, 240, 240, 1);
+    --white-semiTransparent: rgba(240, 240, 240, 0.9);
+    /* Paleta de colores miscelánea */
+    --disabled: rgba(50, 55, 117, 0.75);
+    --disabledOpacity: .8;
+    /* Medidas */
+    --gap: 20px;
+    --gap-md: 10px;
+    --gap-sm: 3px;
+    --container: 70%;
+    --container-xl: 85%;
+    /* Tiempo de animaciones/transiciones */
+    --timing: .5s;
+    --timing-md: .35s; /* Usado en elementos con interacción directa con el cursor del usuario */
+    --timing-sm: .15s;
+}
+body {
+    background: var(--white);
+    margin: 0;
+}
+/* Tipografías y colores */
+h1 {font-size: 36px;line-height: 46px}
+h2 {font-size: 30px;line-height: 40px}
+h3 {font-size: 24px;line-height: 34px}
+h4 {font-size: 22px;line-height: 32px}
+h5 {font-size: 20px;line-height: 30px}
+h6 {font-size: 18px;line-height: 28px}
+h1, h2, h3, h4, h5, h6 {font-family: "Montserrat Light", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-variant: small-caps;color: var(--black)}
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+    color: var(--blue);
+    margin-right: var(--gap);
+    transition: var(--timing-md) ease-out;
+}
+h1:hover span, h2:hover span, h3:hover span, h4:hover span, h5:hover span, h6:hover span {
+    margin-right: var(--gap-md);
+}
+p, ul, ol {font-family: 'Times New Roman', Times, serif;font-size: 18px;line-height: 36px;color: var(--black)}
+h1.logo {font-family: "Orbitron Bold", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+/* Links */
+a {
+    color: var(--quietViolet);
+    text-decoration: none;
+    padding-bottom: var(--gap-sm);
+    border-bottom: var(--gap-sm) solid var(--quietViolet)
+}
+a:hover {
+    color: var(--modernBlue);
+    border-bottom: var(--gap-sm) solid var(--modernBlue)
+}
+/* Separador de texto */
+hr {
+    margin-bottom: var(--gap-md);
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, var(--gray), var(--black), var(--gray))
+}
+/* Sistema de grillas */
+[class*=grid] {
+    display: grid;
+    align-items: center;
+}
+.grid-2 {grid-template-columns: repeat(2, 1fr);}
+.container .grid-2 {grid-template-columns: 25% auto;} /* Es muy probable que las grillas dentro de contenedores de texto se usen para mostrar un texto al costado de un párrafo */
+.grid-3 {grid-template-columns: repeat(3, 1fr);}
+.grid-4 {grid-template-columns: repeat(4, 1fr);}
+.gap {gap: var(--gap)}
+/* Anchos */
+.fullWidth {width: 100%}
+/* Contenedores */
+.container {width: var(--container)}
+.container-xl {width: var(--container-xl)}
+/* Márgenes */
+.margin {margin: var(--gap) !important}
+.margin-xl {margin: calc( 2 * var(--gap) ) !important}
+.marginY-xl {margin-top: calc( 2 * var(--gap) ) !important;margin-bottom: calc( 2 * var(--gap) ) !important}
+.marginY-xxl {margin-top: calc( 3 * var(--gap) ) !important;margin-bottom: calc( 3 * var(--gap) ) !important}
+.padding {padding: var(--gap)}
+.paddingY-xl {padding-top: calc( 2 * var(--gap) );padding-bottom: calc( 2 * var(--gap) )}
+.padding-xl {padding: calc( 2 * var(--gap) )}
+/* Bordes */
+.border {border: var(--gap-sm) dashed var(--modernBlue)}
+.borderLeft {border-left: var(--gap-sm) dashed var(--modernBlue)}
+.borderRight {border-right: var(--gap-sm) dashed var(--modernBlue)}
+/* Posicionamiento */
+.center {margin: 0 auto}
+h1.center, h2.center, h3.center, h4.center, h5.center, h6.center, p.center {text-align: center}
+/* Fondos */
+.bgBlack {background: var(--black)}
+.bgBlue {background: var(--blue)}
+.bgBlueGradient {background: var(--blueGradient)}
+.bgGreen {background: var(--green)}
+.bgGray {background: var(--gray)}
+.bgGray.semiTransparent {background: var(--gray-semiTransparent);backdrop-filter: blur(var(--gap-sm));}
+.bgModernBlue {background: var(--modernBlue)}
+.bgRed {background: var(--red)}
+.bgQuietViolet {background: var(--quietViolet)}
+.bgViolet {background: var(--violet)}
+.bgWhite {background: var(--white)}
+.bgWhite.semiTransparent {background: var(--white-semiTransparent);backdrop-filter: blur(var(--gap-sm));}
+/* Colores de texto */
+.white {color: var(--white)}
+/* Sombras */
+.shadow {
+    box-shadow: 0 5px var(--gap) var(--gray);
+    transition: var(--timing) ease-out
+}
+.shadow-xl {
+    box-shadow: 0 12.5px 40px var(--gray);
+    transition: var(--timing) ease-out
+}
+.shadow:hover {
+    box-shadow: 0 5px var(--gap) var(--black-semiTransparent)
+}
+.shadow-xl:hover {
+    box-shadow: 0 12.5px 40px var(--black-semiTransparent)
+}
+/* Página principal */
+#indexText h1, #indexText p {color: var(--white) !important}
+#indexText a {
+    color: var(--white-semiTransparent);
+    border-bottom: var(--gap-sm) solid var(--white-semiTransparent)
+}
+#indexText a:hover {
+    color: var(--white);
+    border-bottom: var(--gap-sm) solid var(--white)
+}

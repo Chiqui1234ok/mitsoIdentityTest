@@ -1,0 +1,24 @@
+/* Header */
+#header {
+    min-height: 64px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    transition: var(--timing-md) ease-out;
+    opacity: var(--disabledOpacity);
+}
+#header:hover {
+    opacity: 1;
+}
+#header span.menu a {cursor: pointer;color: var(--white);border: none}
+/* Navegación */
+#nav {
+    width: 50vw;
+    top: 0;
+    left: -50vw;
+    position: fixed;
+    transition: all var(--timing) ease-out;
+}
+#nav:target {
+    left: 0;
+}

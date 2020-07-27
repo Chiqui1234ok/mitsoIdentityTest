@@ -1,0 +1,26 @@
+:root {
+    /* Paleta de colores */
+    --black: rgba(45, 45, 45, 1);
+    --black-semiTransparent: rgba(45, 45, 45, 0.5);
+    --blue: rgba(35, 35, 215, 1);
+    --blueGradient: linear-gradient(180deg, var(--modernBlue) 0%, var(--violet) 100%);
+    --green: rgba(35, 215, 35, 1);
+    --gray: rgba(180, 180, 195, 1);
+    --gray-semiTransparent: rgba(218, 218, 228, 0.9);
+    --grayGradient: linear-gradient(180deg, var(--gray) 0%, var(--white) 100%);
+    --modernBlue: rgba(53, 59, 143, 1);
+    --red: rgba(255, 50, 75, 1);
+    --violet: rgb(78, 47, 218);
+    --white: rgba(240, 240, 240, 1);
+    --white-semiTransparent: rgba(240, 240, 240, 0.9);
+    /* Paleta de colores miscelánea */
+    --disabled: rgba(50, 55, 117, 0.75);
+    /* Medidas */
+    --gap: 20px;
+    --gap-md: 10px;
+    --container: 70%;
+    --container-xl: 85%;
+    /* Tiempo de animaciones/transiciones */
+    --timing: .5s;
+    --timing-md: .35s;
+}
