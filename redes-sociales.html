@@ -1,0 +1,66 @@
+<!-- 
+    https://www.neolo.com/blog/tamano-de-imagenes-para-redes-sociales-2020.php#:~:text=Tama%C3%B1o%20de%20im%C3%A1genes%20para%20Instagram%20(2020)&text=Si%20quieres%20subir%20fotograf%C3%ADas%20puedes,p%C3%ADxeles%20es%20la%20medida%20perfecta.
+
+    https://socialmedier.com/tamano-imagenes-facebook-2020/#:~:text=TAMA%C3%91O%20IM%C3%81GENES%20EN%20FACEBOOK%20EN%20NAVEGADOR&text=Tama%C3%B1o%20Imagen%20PERFIL%20Facebook%3A%20180,CUADRADAS%3A%201200%20x%201200%20pixels.
+ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MITSO Tech</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/facebook.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/circle.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/input.css">
+</head>
+<body>
+    <div id="header" class="bgModernBlue padding">
+        <span class="menu"><a onclick="alert('¡No se toca! :P')">☰</a></span>
+    </div>
+    <!--  -->
+    <div class="container-xl center padding marginY-xl bgGray semiTransparent shadow" style="margin-top: -30px;">
+        <h1 id="colores"><span>#</span>REDES SOCIALES</h1>
+        <hr>
+        <p>Facebook e Instagram comparten muchas relaciones de aspecto para las imágenes. Por esta razón, una plantilla puede servir para ambas redes sociales en casi todos los casos.</p>
+        <p>En todos los casos, ubicar el contenido impresindible al centro de la imágen y dejar -al menos- 135px de espacio entre cada borde de la imágen y su contenido. Este valor se encuentra en la variable CSS <code>gap-xxxl</code>.</p>
+        <p>De esta forma, los posts en las redes sociales son mucho más rápidos y fáciles de crear.</p>
+        <h2>Publicación con imágen</h2>
+        <p>Luego de describir los dos tipos de resoluciones a tomar en cuenta, hay una demostración interactiva dónde se aprecian los puntos claves de mi plantilla para las redes sociales.</p>
+        <h3>Resoluciones 1:1</h3>
+        <p>Facebook utiliza una resolución de <code>1200 x 1200px</code> e Instagram <code>640 x 640px</code>, es decir, relación <strong>1:1</strong> (cuadrada).</p>
+        <p>Esta relación de aspecto se usa en:</p>
+        <ul>
+            <li>Publicaciones promocionadas (notebooks, PCs)</li>
+            <li>Publicaciones con imágenes subidas por el CM</li>
+        </ul>
+        <h3>Resoluciones 2:1</h3>
+        <p>También puede suceder que al colocar un link en una publicación, Facebook tome una imágen del sitio web que se está compartiendo. En ese caso la resolución de la imágen cambia a <code>1200x628</code> y es vital que el SEO del sitio web indique una imágen de esta resolución para su perfecta visualización en la red social.</p>
+        <p>A continuación podés observar como se adapta mi concepto de plantilla a resoluciones 1:1 y 2:1 (también conocida como 18:9).</p>
+        <!-- FB Wrapper -->
+        <div id="fbWrapper" class="grid res1200x1200 center">
+            <div id="fbTitle" class="grid-2">
+                <h1 class="montserrat left">#Marketing</h1>
+                <h1 class="orbitron right">MITSO TECH</h1>
+            </div>
+            <p id="fbText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eos ea libero eum perferendis aut labore aliquid accusamus adipisci reprehenderit quo exercitationem, ipsam soluta voluptas rerum voluptates vero est quas.</p>
+            <div class="video">
+                <video width="100%" height="100%" autoplay>
+                    <source src="assets/video/big-buck-bunny-example.mp4" type="video/mp4">
+                    <!-- <source src="movie.ogg" type="video/ogg"> -->
+                  Your browser does not support the video tag.
+                  </video>
+            </div>
+        </div>
+        <div id="fbCaption" class="center"> <!-- Sólo aparece cuándo se usa la res. 1200x628 -->
+            <h2 class="serif">Link auto-generado de Facebook</h2>
+            <p class="sansSerif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel amet recusandae dolore quae velit, eos quo temporibus, fugiat aliquam ea suscipit accusamus quibusdam placeat quisquam itaque. Ea necessitatibus quia soluta.</p>
+            <p class="montserrat">LOREM.COM</p>
+        </div>
+        <!--  !FB Wrapper -->
+    </div>
+    <!--  -->
+</body>
+</html>

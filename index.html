@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,19 +20,18 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consequatur dolore necessitatibus magni repellendus quis quod nisi, quam fugiat temporibus maxime veniam consectetur totam placeat qui a corporis numquam est.</p>
     </nav>
     <!--  -->
-    <div class="container center padding-xl bgBlueGradient">
+    <div class="fullWidth center padding-xxxl bgLightBlueGradient">
         <div id="indexText" class="grid-2 gap">
             <img src="assets/img/logo-semitransparent.png" alt="" width="100%">
             <div class="text white">
-                <h1>MITSO Tech</h1>
+                <h1 class="orbitron">MITSO Tech</h1>
                 <p>
-                    El logotipo utiliza la tipografía <span class="orbitron">Orbitron Bold</span>. Los titulos recurren a <span class="montserrat">Montserrat</span> y el <strong>cuerpo de texto</strong> es de tipo Serif.
+                    El logotipo se basa en la tipografía <span class="orbitron">Orbitron Bold</span>. Los titulos recurren a <span class="montserrat">Montserrat</span> y el <strong>cuerpo de texto</strong> es de tipo Serif.
                 </p>
                 <p>
                     El objetivo principal de esta identidad de marca es aportar consistencia gráfica en la interacción de la empresa con nuestros socios y clientes. También se busca brindar nuevos estándares a la plantilla <a href="#">Techie</a>, que el equipo de Front-end está preparando para lanzarla a producción.
                 </p>
             </div>
-            
         </div>
     </div>
     <!--  -->
@@ -92,7 +91,7 @@
                         <h1 class="orbitron">MITSO TECH <span style="font-size: 20px">SRL</span></h1>
                         <h4>Marketing y software</h4>
                         <p>Tel. 4783-5000</p>
-                        <p>hola@mitso.com.ar</p>
+                        <p>hola@mitso.com</p>
                     </div>
                     <div class="bottom">
                         <ul>
@@ -172,17 +171,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus consequatur dolor omnis dolores dolorum harum rem praesentium recusandae, exercitationem sunt fugiat eius, reiciendis ducimus provident ipsum maiores consectetur tempore voluptates?
         </p>
     </div>
-    <script>
-        window.addEventListener("scroll", myScript);
-        function myScript() {
-            let y = window.scrollY;
-            let maxHeight = document.body.scrollHeight;
-            let turbo = 1.5; // Esto para acelerar el scroll
-            let percentage = (y / maxHeight) * 100 * turbo;
-            console.log(`${percentage}%, pos ${y}, maxHeight ${maxHeight}`);
-            document.getElementById('header').style.height = percentage + 'vh';
-        }
-    </script> 
+    <script src="assets/js/header.js"></script> 
     <!-- 
         El 'script' tag vacío soluciona el bug de Chrome (transiciones CSS ejecutándose al inicio), revisar siguientes fuentes si es necesario:
         1) https://bugs.chromium.org/p/chromium/issues/detail?id=332189

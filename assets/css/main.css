@@ -17,6 +17,8 @@
     font-weight: 500;
 }
 .orbitron {font-family: 'Orbitron Bold'}
+.serif {font-family: Georgia, 'Times New Roman', Times, serif;font-variant: initial}
+.sansSerif {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
 /* Variables */
 :root {
     /* Paleta de colores */
@@ -28,6 +30,8 @@
     --gray: rgba(180, 180, 195, 1);
     --gray-semiTransparent: rgba(218, 218, 228, 0.9);
     --grayGradient: linear-gradient(180deg, var(--gray) 0%, var(--white) 100%);
+    --lightBlue: rgb(35, 165, 225);
+    --lightBlueGradient: linear-gradient(180deg, var(--lightBlue) 0%, var(--modernBlue) 100%);
     --modernBlue: rgba(50, 50, 255, 1);
     --quietViolet: rgba(53, 59, 143, 1);
     --red: rgba(255, 50, 75, 1);
@@ -38,6 +42,7 @@
     --disabled: rgba(50, 55, 117, 0.75);
     --disabledOpacity: .8;
     /* Medidas */
+    --gap-xxxl: 135px;
     --gap: 20px;
     --gap-md: 10px;
     --gap-sm: 3px;
@@ -53,12 +58,12 @@ body {
     margin: 0;
 }
 /* Tipografías y colores */
-h1 {font-size: 36px;line-height: 46px}
-h2 {font-size: 30px;line-height: 40px}
-h3 {font-size: 24px;line-height: 34px}
-h4 {font-size: 22px;line-height: 32px}
-h5 {font-size: 20px;line-height: 30px}
-h6 {font-size: 18px;line-height: 28px}
+h1 {font-size: 38px;line-height: 48px}
+h2 {font-size: 32px;line-height: 42px}
+h3 {font-size: 26px;line-height: 36px}
+h4 {font-size: 24px;line-height: 34px}
+h5 {font-size: 22px;line-height: 32px}
+h6 {font-size: 20px;line-height: 30px}
 h1, h2, h3, h4, h5, h6 {font-family: "Montserrat Light", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-variant: small-caps;color: var(--black)}
 h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
     color: var(--blue);
@@ -68,7 +73,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 h1:hover span, h2:hover span, h3:hover span, h4:hover span, h5:hover span, h6:hover span {
     margin-right: var(--gap-md);
 }
-p, ul, ol {font-family: 'Times New Roman', Times, serif;font-size: 18px;line-height: 36px;color: var(--black)}
+p, ul, ol {font-family: 'Times New Roman', Times, serif;font-size: 22px;line-height: 36px;color: var(--black)}
 h1.logo {font-family: "Orbitron Bold", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
 /* Links */
 a {
@@ -112,26 +117,30 @@ hr {
 .padding {padding: var(--gap)}
 .paddingY-xl {padding-top: calc( 2 * var(--gap) );padding-bottom: calc( 2 * var(--gap) )}
 .padding-xl {padding: calc( 2 * var(--gap) )}
+.padding-xxxl {padding: var(--gap-xxxl)}
 /* Bordes */
 .border {border: var(--gap-sm) dashed var(--modernBlue)}
 .borderLeft {border-left: var(--gap-sm) dashed var(--modernBlue)}
 .borderRight {border-right: var(--gap-sm) dashed var(--modernBlue)}
 /* Posicionamiento */
-.center {margin: 0 auto}
+.center {margin: 0 auto} /* Sólo para elementos relativos */
+h1.left, h2.left, h3.left, h4.left, h5.left, h6.left, p.left {text-align: left}
 h1.center, h2.center, h3.center, h4.center, h5.center, h6.center, p.center {text-align: center}
+h1.right, h2.right, h3.right, h4.right, h5.right, h6.right, p.right {text-align: right}
 /* Fondos */
 .bgBlack {background: var(--black)}
 .bgBlue {background: var(--blue)}
 .bgBlueGradient {background: var(--blueGradient)}
 .bgGreen {background: var(--green)}
 .bgGray {background: var(--gray)}
-.bgGray.semiTransparent {background: var(--gray-semiTransparent);backdrop-filter: blur(var(--gap-sm));}
+.bgGray.semiTransparent {background: var(--gray-semiTransparent)}
+.bgLightBlueGradient {background: var(--lightBlueGradient)}
 .bgModernBlue {background: var(--modernBlue)}
 .bgRed {background: var(--red)}
 .bgQuietViolet {background: var(--quietViolet)}
 .bgViolet {background: var(--violet)}
 .bgWhite {background: var(--white)}
-.bgWhite.semiTransparent {background: var(--white-semiTransparent);backdrop-filter: blur(var(--gap-sm));}
+.bgWhite.semiTransparent {background: var(--white-semiTransparent)}
 /* Colores de texto */
 .white {color: var(--white)}
 /* Sombras */

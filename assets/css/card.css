@@ -8,7 +8,7 @@
     transform: rotate3d(2, 4, 0, 45deg);
     transition: var(--timing) ease-out;
     border: 1px solid var(--black);
-    box-shadow: -10px 10px var(--gap) var(--modernBlue);
+    box-shadow: -10px 10px var(--gap) var(--black-semiTransparent);
 }
 .card::before {
     content: "";
@@ -18,7 +18,7 @@
     top: -50%;
     left: -50%;
     z-index: -1;
-    background: linear-gradient(90deg, var(--modernBlue) 0%, var(--violet) 80%, var(--black) 81%) 0 0 repeat;
+    background: linear-gradient(90deg, var(--lightBlue) 0%, var(--modernBlue) 80%, var(--black) 81%) 0 0 repeat;
     transform: rotate(30deg);
 }
 .card.grid-2 {grid-template-columns: 60% auto;}
