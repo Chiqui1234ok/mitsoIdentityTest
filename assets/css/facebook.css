@@ -3,6 +3,7 @@
     overflow: hidden;
     position: relative;
     transition: all var(--timing) ease-out;
+    text-shadow: 0 0 3px var(--black)
     /* background: #eee; */
 }
 #fbWrapper #fbTitle, #fbWrapper #fbText {z-index: 2}
