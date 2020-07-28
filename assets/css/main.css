@@ -43,6 +43,7 @@
     --disabledOpacity: .8;
     /* Medidas */
     --gap-xxxl: 135px;
+    --gap-xl: 40px;
     --gap: 20px;
     --gap-md: 10px;
     --gap-sm: 3px;
@@ -104,6 +105,7 @@ hr {
 .grid-3 {grid-template-columns: repeat(3, 1fr);}
 .grid-4 {grid-template-columns: repeat(4, 1fr);}
 .gap {gap: var(--gap)}
+.gap-xl {gap: var(--gap-xl)}
 /* Anchos */
 .fullWidth {width: 100%}
 /* Contenedores */
@@ -159,6 +161,7 @@ h1.right, h2.right, h3.right, h4.right, h5.right, h6.right, p.right {text-align:
     box-shadow: 0 12.5px 40px var(--black-semiTransparent)
 }
 /* Página principal */
+#indexText.grid-2 {grid-template-columns: 15% auto}
 #indexText h1, #indexText p {color: var(--white) !important}
 #indexText a {
     color: var(--white-semiTransparent);

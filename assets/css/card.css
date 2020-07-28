@@ -18,7 +18,7 @@
     top: -50%;
     left: -50%;
     z-index: -1;
-    background: linear-gradient(90deg, var(--lightBlue) 0%, var(--modernBlue) 80%, var(--black) 81%) 0 0 repeat;
+    background: linear-gradient(90deg, var(--lightBlue) 25%, var(--modernBlue) 80%, var(--black) 81%) 0 0 repeat;
     transform: rotate(30deg);
 }
 .card.grid-2 {grid-template-columns: 60% auto;}
@@ -27,7 +27,7 @@
 .card:hover {
     transform: rotate3d(0, 0, 0, 45deg);
     border-radius: var(--gap-sm);
-    box-shadow: 0 0 var(--gap-md) var(--modernBlue);
+    box-shadow: 0 0 var(--gap-md) var(--lightBlue);
 }
 .card ul {list-style: none}
 .card ul li {padding: var(--gap-md) 0 var(--gap-md) 0}

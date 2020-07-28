@@ -1,0 +1,46 @@
+i {
+  display: inline-block;
+}
+i::before {
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  width: 32px;
+  height: 32px;
+  margin-right: 42px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-code {
+  width: 1.25em;
+}
+i.android {
+  background: url('../img/icon/android.svg') center / cover;
+}
+i.code {
+  background: url('../img/icon/code.svg') center / cover;
+}
+i.earth {
+  background: url('../img/icon/earth.svg') center / cover;
+}
+i.marketing {
+  background: url('../img/icon/marketing.svg') center / cover;
+}
+i.smartphone, i.smartphone.portrait {
+  background: url('../img/icon/smartphone.svg') center / cover;
+}
+i.smartphone.landscape {
+  background: url('../img/icon/smartphone.svg') center / cover;
+  transform: rotate(90deg);
+}

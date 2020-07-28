@@ -5,7 +5,7 @@
     left: 0;
     position: fixed;
     transition: var(--timing-md) ease-out;
-    opacity: var(--disabledOpacity);
+    /* opacity: var(--disabledOpacity); */
 }
 #header:hover {
     opacity: 1;

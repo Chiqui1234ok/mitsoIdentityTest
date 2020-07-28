@@ -10,14 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MITSO Tech</title>
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/facebook.css">
     <link rel="stylesheet" href="assets/css/card.css">
     <link rel="stylesheet" href="assets/css/circle.css">
+    <link rel="stylesheet" href="assets/css/facebook.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/input.css">
 </head>
 <body>
-    <div id="header" class="bgModernBlue padding">
+    <div id="header" class="padding">
         <span class="menu"><a onclick="alert('¡No se toca! :P')">☰</a></span>
     </div>
     <!--  -->
@@ -27,27 +27,40 @@
         <p>Facebook e Instagram comparten muchas relaciones de aspecto para las imágenes. Por esta razón, una plantilla puede servir para ambas redes sociales en casi todos los casos.</p>
         <p>En todos los casos, ubicar el contenido impresindible al centro de la imágen y dejar -al menos- 135px de espacio entre cada borde de la imágen y su contenido. Este valor se encuentra en la variable CSS <code>gap-xxxl</code>.</p>
         <p>De esta forma, los posts en las redes sociales son mucho más rápidos y fáciles de crear.</p>
+        <hr>
         <h2>Publicación con imágen</h2>
         <p>Luego de describir los dos tipos de resoluciones a tomar en cuenta, hay una demostración interactiva dónde se aprecian los puntos claves de mi plantilla para las redes sociales.</p>
         <h3>Resoluciones 1:1</h3>
         <p>Facebook utiliza una resolución de <code>1200 x 1200px</code> e Instagram <code>640 x 640px</code>, es decir, relación <strong>1:1</strong> (cuadrada).</p>
         <p>Esta relación de aspecto se usa en:</p>
         <ul>
-            <li>Publicaciones promocionadas (notebooks, PCs)</li>
-            <li>Publicaciones con imágenes subidas por el CM</li>
+            <li>Imágen de perfil <code>180 x 180px</code></li>
+            <li>Publicaciones promocionadas (notebooks, PCs) <code>1200 x 1200px</code></li>
+            <li>Publicaciones con imágenes subidas por el Community Manager <code>1200 x 1200px</code></li>
         </ul>
         <h3>Resoluciones 2:1</h3>
         <p>También puede suceder que al colocar un link en una publicación, Facebook tome una imágen del sitio web que se está compartiendo. En ese caso la resolución de la imágen cambia a <code>1200x628</code> y es vital que el SEO del sitio web indique una imágen de esta resolución para su perfecta visualización en la red social.</p>
+        <h3>Ejemplos interactivos</h3>
         <p>A continuación podés observar como se adapta mi concepto de plantilla a resoluciones 1:1 y 2:1 (también conocida como 18:9).</p>
+        <p><strong>Cliqueá cualquiera de los dos botones para simular dos tamaños de publicación en Facebook</strong>. Por otro lado, <strong>Instagram es sólo compatible con resoluciones cuadradas</strong> (1:1).</p>
         <!-- FB Wrapper -->
+        <div id="fbVideoNav" class="center grid-2 gap-xl" onmouseover="fadeIn('fbNotificationBar')">
+            <button class="button" type="button" onclick="postWithPhoto()">Post con foto (1:1)</button>
+            <button class="button" type="button" onclick="postWithLink()">Post con link (2:1)</button>
+        </div>
+        <div id="fbNotificationBar" class="notification"> <!-- Esta notificación aparece cuándo el usuario quiere cambiar el tamaño de publicación. JS añadirá una clase "fadeIn" -->
+            <p>¡Hey! ¿Ves un cuadrado negro, pero no el video? Haz clic en el cuadrado negro para que corra el video de fondo.</p>
+        </div>
         <div id="fbWrapper" class="grid res1200x1200 center">
             <div id="fbTitle" class="grid-2">
                 <h1 class="montserrat left">#Marketing</h1>
                 <h1 class="orbitron right">MITSO TECH</h1>
             </div>
-            <p id="fbText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eos ea libero eum perferendis aut labore aliquid accusamus adipisci reprehenderit quo exercitationem, ipsam soluta voluptas rerum voluptates vero est quas.</p>
+            <p id="fbText" class="center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
             <div class="video">
-                <video width="100%" height="100%" autoplay>
+                <video width="100%" height="100%" autoplay controls>
                     <source src="assets/video/big-buck-bunny-example.mp4" type="video/mp4">
                     <!-- <source src="movie.ogg" type="video/ogg"> -->
                   Your browser does not support the video tag.
@@ -55,12 +68,48 @@
             </div>
         </div>
         <div id="fbCaption" class="center"> <!-- Sólo aparece cuándo se usa la res. 1200x628 -->
-            <h2 class="serif">Link auto-generado de Facebook</h2>
-            <p class="sansSerif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel amet recusandae dolore quae velit, eos quo temporibus, fugiat aliquam ea suscipit accusamus quibusdam placeat quisquam itaque. Ea necessitatibus quia soluta.</p>
+            <h2 class="serif">Información extraída de un sitio web</h2>
+            <p class="sansSerif">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eos ea libero eum perferendis aut labore aliquid accusamus adipisci reprehenderit quo exercitationem, ipsam soluta voluptas rerum voluptates vero est quas.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fuga dolore, nam ea, quaerat perspiciatis vitae vero magnam officiis tempora quibusdam sint. Laboriosam iusto aperiam atque saepe aliquam nesciunt unde.
+            </p>
             <p class="montserrat">LOREM.COM</p>
         </div>
         <!--  !FB Wrapper -->
+        <h3>Descripción de la plantilla</h3>
+        <div class="grid-2 gap">
+            <div id="fbWrapperSup">
+                <h4>Parte superior</h4>
+                <p>A la izquierda se ubica el tema principal del que se va a hablar en la publicación. A la derecha se coloca el nombre de la empresa con el fin de lograr una identificación rápida y evitar que nos roben la imágen.</p>
+            </div>
+            <div id="fbWrapperInf">
+                <h4>Parte inferior</h4>
+                <p>Un slogan que describa el tema del que se va a hablar en la publicación.</p>
+                <p><strong>Esta parte sólo se ve en imágenes cuadradas</strong>, ya que en la relación 2:1 (incrustación de link en la publicación) tendremos la descripción del tema a hablar vía los meta-datos que extraiga Facebook del enlace a compartir.</p>
+            </div>
+        </div>
     </div>
     <!--  -->
+    <script src="assets/js/header.js"></script> 
+    <script>
+        function reset() {
+            document.getElementById('fbWrapper').classList.remove('res1200x1200');
+            document.getElementById('fbWrapper').classList.remove('res1200x628');
+        }
+        function postWithPhoto() {
+            reset();
+            document.getElementById('fbWrapper').classList.add('res1200x1200');
+            document.getElementById('fbCaption').style.display = 'none';
+        }
+        function postWithLink() {
+            reset();
+            document.getElementById('fbWrapper').classList.add('res1200x628');
+            document.getElementById('fbCaption').style.display = 'block';
+        }
+        function fadeIn(id) {
+            document.getElementById(id).classList.add('fadeIn');
+        }
+    </script>
+    <script> </script>
 </body>
 </html>

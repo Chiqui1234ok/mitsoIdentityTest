@@ -1,3 +1,8 @@
+#fbVideoNav {width: 1200px}
+    @media (max-width: 1600px) {
+        #fbVideoNav {width: 600px}
+    }
+#fbNotificationBar {display: none}
 #fbWrapper {
     padding: var(--gap-xxxl);
     overflow: hidden;
@@ -6,10 +11,10 @@
     text-shadow: 0 0 3px var(--black)
     /* background: #eee; */
 }
-#fbWrapper #fbTitle, #fbWrapper #fbText {z-index: 2}
+#fbWrapper #fbTitle, #fbWrapper p#fbText {z-index: 2}
 #fbWrapper #fbTitle h1, #fbWrapper p#fbText {color: var(--white)}
 #fbWrapper #fbTitle h1 {font-size: 52px}
-#fbWrapper p#fbText {font-size: 38px;line-height: 48px}
+#fbWrapper p#fbText {font-size: 38px;line-height: 48px;align-self: flex-end}
 #fbWrapper .video {
     position: absolute;
     width: 100%;
@@ -19,38 +24,61 @@
     /* opacity: var(--disabledOpacity); */
     z-index: 0;
 }
-#fbWrapper .video video {
-    transform: scale(1.8);
-}
 #fbWrapper.res1200x1200 {
     width: 1200px;
     height: 1200px;
 }
-    #fbWrapper.res1200x1200 #fbTitle, #fbWrapper.res1200x628 #fbTitle {
+    #fbWrapper.res1200x1200 #fbTitle {
         position: absolute;
         top: 135px;
         left: 135px;
         width: calc( 100% - 135px - 135px );
     }
+    #fbWrapper.res1200x1200 .video video {transform: scale(1.8)}
+    @media (max-width: 1600px) {
+        #fbWrapper #fbTitle h1 {font-size: 22px}
+        #fbWrapper p#fbText {font-size: 20px;line-height: 30px}
+        #fbWrapper.res1200x1200 {
+            width: 600px;
+            height: 600px;
+        }
+    }
+/*  */
 #fbWrapper.res1200x628 {
     width: 1200px;
     height: 628px;
+    padding: 0
 }
+    #fbWrapper.res1200x628 #fbTitle {
+        position: relative;
+        margin: 0 auto;
+        width: calc( 100% - 135px - 135px );
+    }
+    #fbWrapper.res1200x628 .video video {transform: scale(1.25)}
     /* #fbWrapper.res1200x628 #fbTitle -> especificado junto con #fbWrapper.res1200x1200 #fbTitle */
-    #fbWrapper.res1200x628 #fbText {
-        width: calc(100% - 135px - 135px);
-        position: absolute;
-        bottom: 135px;
-        left:135px;
-        font-size: 32px
+    #fbWrapper.res1200x628 p#fbText {display: none} /* Se deshabilita el texto en la plantilla, porque se supone que el texto relavante está incrustado en el preview de la página web */
+    @media (max-width: 1600px) {
+        #fbWrapper.res1200x628 #fbTitle h1 {font-size: 22px}
+        #fbWrapper.res1200x628 p#fbText {display: none}
+        #fbWrapper.res1200x628 {
+            width: 600px;
+            height: 314px;
+        }
     }
 /* fbCaption, sólo usado en imágenes incrustadas por links */
 #fbCaption {
     width: 1200px;
     padding: var(--gap); /* El padding que tiene facebook en su caja interna */
-    background: #eee;
+    background: rgb(216, 216, 216);
     border: 1px solid var(--black-semiTransparent);
     margin-top: -1px;
     clear: both;
-    /* display: none; */
+    display: none;
 }
+    @media (max-width: 1600px) {
+        #fbCaption {
+            width: 600px;
+        }
+        #fbCaption h2 {font-size: 22px}
+        #fbCaption p {font-size: 16px}
+    }
